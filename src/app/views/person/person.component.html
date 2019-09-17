@@ -1,0 +1,27 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-text">
+                            <h4>Persons</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <blockquote>
+                            <app-person-create>Create from modal</app-person-create>
+                            <app-person-create-listener class="ml-3">Create over modal hostlistener</app-person-create-listener>
+                            <button class="btn btn-sm btn-outline-primary ml-3" (click)="onClickCreate()">Create over modal</button>
+                            <button class="btn btn-sm btn-outline-success ml-3" (click)="onClickCreateParentWork()">Create over parent</button>
+                            <button class="btn btn-sm btn-outline-success ml-3" [appModalCreate]="modalType" [modalTitle]="'Modal with component from directive'">Create over directive</button>
+                        </blockquote>
+                        <div class="table-responsive">
+                            <table datatable [dtOptions]="dtOptions" class="row-border hover"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

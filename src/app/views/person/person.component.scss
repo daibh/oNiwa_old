@@ -1,0 +1,17 @@
+section {
+  padding: 2.5rem 0;
+}
+
+/*
+   server-side-angular-way.component.css
+*/
+.no-data-available {
+  text-align: center;
+}
+
+/*
+     src/styles.css (i.e. your global style)
+  */
+:host ::ng-deep .dataTables_empty {
+  display: none;
+}
